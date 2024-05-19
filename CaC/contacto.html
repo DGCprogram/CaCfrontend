@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="icon" type="image/png" href="img/molecula.png">
+    <link rel= "stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Hospital Municipal de Oncología Maria Curie</h1>
+        <h2>Contacto</h2></header>
+    <nav class="nav">
+        <ul>
+            <li>
+                <a href="index.html">Principal</a>
+                </li>
+            <li>Nuestro Hospital
+                <ul>
+                    <li>Institucional
+                        <ul>
+                            <li>
+                                <a href="historia.html">Historia</a>
+                                 </li>
+                            <li><a href="jornadas.html">Jornadas</a></li>
+                        </ul>
+                    </li>
+                    <li>Paciente
+                        <ul>
+                            <li><a href="contacto.html">Contacto</a></li>
+                            <li><a href="turnos.html">Solicitud turno</a></li>
+                            <li><a href="servicios.html">Servicios médicos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Info salud
+                <ul>
+                    <li><a href="prevencion.html">Prevención</a></li>
+                    <li>Alimentación 
+                    <ul>
+                        <li><a href="general.html">General</a></li>
+                        <li><a href="cardiovascular.html">Cardiovascular</a></li>
+                        <li><a href="celiaca.html">Celiaca</a></li>
+                        
+
+                    </ul></li>
+                </ul>
+            </li>
+            <li>Docencia e Investigación
+                <ul>
+                    <li><a href="capacitacion.html">Capacitacion</a></li>
+                    <li><a href="enfermeria.html">Escuela de enfermería</a></li>
+                    <li><a href="residencias.html">Residencias</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</p>
+<section>
+    <h3>Horarios de atención</h3>
+    <p>
+        Horarios de atencion teléfonica: de 8 a 16Hs
+        <br>
+        Horario de atención personal: de 8 a 13Hs
+    </p>
+</section>
+
+<h3>Comenta cómo fue tu experiencia con la atención</h3>
+<form action="" class="formulario" method="post" id="formulario">
+    <fieldset class="cont" id="cont">
+        <div class="formulario_grupo" id="grupo_nombre">
+            <label for="nombre" class="formulario_label">Nombre</label>
+            <div class="formulario_grupo_input">
+                <input type="text" name="nombre" class="formulario_input" id="nombre" placeholder="Apellido Nombre">
+                <i class="formulario_validacion-estado fa-solid fa-circle-check"></i>
+                <i class="formulario_validacion-estado fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="formulario_input-error">El nombre solo puede contener texto de hasta 20 letras</p>
+        </div>
+        
+        <div class="formulario_grupo" id="grupo_HC">
+            <label for="HC" class="formulario_label">HC</label>
+            <div class="formulario_grupo_input">
+                <input type="number" name="HC" class="formulario_input" id="HC" placeholder="Historia clinica" min="1">
+                <i class="formulario_validacion-estado fa-solid fa-circle-check"></i>
+                <i class="formulario_validacion-estado fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="formulario_input-error">La historia clinica debe ser mayor que 0</p>
+        </div>
+        <div class="formulario_grupo" id="grupo_email">
+            <label for="email" class="formulario_label">Email</label>
+            <div class="formulario_grupo_input">
+                <input type="email" name="email" class="formulario_input" id="mail" placeholder="email@gmail.com">
+                <i class="formulario_validacion-estado fa-solid fa-circle-check"></i>
+                <i class="formulario_validacion-estado fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="formulario_input-error">El campo correo debe contener el @ y puede estar formado por letras, numeros, puntos, guiones y guion bajo.</p>
+        </div>
+        <br>
+        <div class="formulario_grupo" id="grupo_atencion">
+            <div class="formulario_atencion">Atencion</div>    
+            <label class="formulario_radio">
+                <input class="formulario_radio" type="radio" name="atencion" id="ambulatoria">Ambulatoria
+            </label>
+            <label class="formulario_radio">
+                <input class="formulario_radio" type="radio" name="atencion" id="internacion">Internacion
+            </label>
+        </div>
+        <br>
+        <div class="formulario_grupo" id="grupo_experiencia">
+            <div class="formulario_atencion">Experiencia</div>  
+                <select name="utilizacion" id="exp">
+                    <option value="1">Muy buena</option>
+                    <option value="2">Buena</option>
+                    <option value="3">Regular</option>
+                    <option value="4">Mala</option>
+                 </select>
+            </div>
+        </div>
+        <br>
+        <div class="formulario_grupo" id="grupo_comentarios">
+            <div class="formulario_atencion">Comentarios/Recomendaciones</div>
+                <textarea class="formulario_textarea" cols="30" rows="7" name="Comentarios" maxlength="200" id="Comentarios">Escriba su consulta o comentario...
+                </textarea>
+        </div>
+        <br>
+        <div class="formulario_grupo" id="grupo_notificacion">
+            <label class="formulario_label">
+                <input class="formulario_checkbox" type="checkbox" name="notificacion" id="notificacion">
+                Recibir notificaciones.
+            </label>
+        </div>
+        <div class="formulario_mensaje" id="formulario_mensaje">
+            <p><i class="fa-solid fa-triangle-exclamation"></i> Error: Por favor complete el formulario correctamente</p>
+        </div>
+        <div class="formulario_grupo formulario_grupo-btn-enviar">
+            <button type="submit" class="formulario_btn">Enviar</button>
+            <p class="formulario_mensaje-exito" id="formulario_mensaje-exito">Formulario enviado exitosamente!</p>
+        </div>
+    </fieldset>
+</form>
+    <footer>
+        <div><a href="mailto:dgc@gmail.com" target="_blank">dgc@gmail.com</a>
+            <br>
+            <a href="tel: 54 11 22245567">54 11 22245567</a>
+            <br>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="x"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </footer>
+    <script src="/javascript/validarformulario1.js"></script>
+</body>
+</html>
